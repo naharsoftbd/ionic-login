@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title text-center>Home</ion-title>
+    <img padding ion-right src="assets/imgs/logo.png" class="navbarLogo" />
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-menu [content]="mycontent">
+  <ion-content>
+     <ion-list>
+       <button  ion-item color="primary" (click)="goToAppointments()">Schedule and Appointments</button>
+    </ion-list>
+    <ion-list>
+       <button  ion-item color="primary" (click)="logout()">Logout</button>
+    </ion-list>
+   
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+  
+</ion-content>
+
